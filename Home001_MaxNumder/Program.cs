@@ -1,12 +1,15 @@
-﻿//Найти максимальное из трех чисел
-Console.WriteLine("Введите 3 числа: ");
-string numbers = Console.ReadLine();
+﻿//Найти максимальное из трех чисел: 2, 3, 7.
+//Найти максимальное из трех чисел: 44, 5, 78.
+//Найти максимальное из трех чисел: 22, 3, 9.
 
-numbers a,b,c;
-int result = max;
-if (
-    a > b a > c then max = a,
-    b > a b > c then max = b,
-    c > a c > b then max = c
-) 
-Console.WriteLine(result);
+int a = 22;
+int b = 3;
+int c = 9;
+
+int max = a;
+
+if (b > max) max = b;
+if (c > max) max = c;
+
+Console.Write("max = ");
+Console.WriteLine(max);
