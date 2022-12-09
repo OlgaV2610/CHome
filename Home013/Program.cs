@@ -6,5 +6,5 @@ if (i < 99) Console.WriteLine("Увы, третьей цифры нет");
 else 
 {
     string s = Convert.ToString(i);
-    Console.WriteLine("Третья цифра: "+ s[2]);
+    Console.WriteLine("В числе " + i + " третья цифра " + s[2]);
 }
