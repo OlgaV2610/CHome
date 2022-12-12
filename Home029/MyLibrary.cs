@@ -6,9 +6,8 @@ public class MyLibrary
     }
 
     public static void Fill(int[] array) // заполнение числами от 0 до 14.
+    for (int i = 0; i < array.Length; i++)
     {
-        for (int i = 0; i < array.Length; i++)
-    }
     array[i] = Random.Shared.Next(0, 15);
     }
 
