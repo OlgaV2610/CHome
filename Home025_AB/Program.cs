@@ -4,4 +4,14 @@
 // 2, 4 -> 16
 // НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ Math.Pow
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Введите число A: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите степень B: ");
+int b = Convert.ToInt32(Console.ReadLine());
+int result = a;
+
+for (int i = 1; i < b; i++)
+{
+    result *= a;
+}
+Console.WriteLine("A в степени B равно: " + result);
