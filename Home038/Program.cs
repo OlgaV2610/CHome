@@ -6,6 +6,11 @@ double[] numbers = {3.1, 7.3, 22.6, 2.5, 78.9};
 PrintArray(numbers);
 double min = Int32.MaxValue;
 double max = Int32.MinValue;
+/* 
+1. найти max значение
+2. найти min значение
+3. разница = max - min
+*/
 
 for (int n = 0; n < numbers.Length; n++)
 {
@@ -31,7 +36,3 @@ void PrintArray(double[] numbers)
     Console.Write("]");
     Console.WriteLine();
 }
-
-/* 1. найти max значение
-2. найти min значение
-3. result = max - min*/

@@ -3,46 +3,93 @@
     [3, 7, 23, 12] -> 19
     [-4, -6, 89, 6] -> 0
 */
-Console.Write("Введите размер массива: ");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] numbers = new int[size];
+/*
+1. Написать метод создание массива целых чисел.
+2. Метод заполнения массива случайными числами от - 10 до 10.
+3. Метод вывода массива на экран.
+4. Метод опредления нечетных индексов.
+5. Метод сложения нечетных индексов.
+6. Метод вывода результата на экран.
+*/
 
-FillArrayRandomNumbers(numbers);
-Console.WriteLine("");
-PrintArray(numbers);
-int sum = 0;
-
-for (int z = 0; z < numbers.Length; z+=2)
+// 1. Написать метод создание массива. 
+int[] CreateArray(int count)
 {
-sum = sum + numbers[z];
+    return new int[count];
 }
-    
-Console.WriteLine($"Cумма элементов на нечётных позициях = {sum}");
-
-void FillArrayRandomNumbers(int[] numbers)
+//2. Метод заполнения массива случайными числами от - 10 до 10.
+void FillArray(int[]array, int argmin, int argmax)
 {
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            numbers[i] = new Random().Next(-100, 100);
-        }
+    int size = array.Length;
+    for (int index = 0; index < size; index++)
+    {
+        array[index] = new Random().Next(argmin, argmax);
+    }
 }
-void PrintArray(int[] numbers)
+// 3. Метод вывода массива на экран.
+
+void PrintArray(int[]array)
 {
-    Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write(numbers[i] + " ");
-        }
-    Console.Write("]");
+    int count = array.Length;
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
     Console.WriteLine();
 }
 
-int[] array = new int[4];
-Random rand = new Random();
-for (int x = 0; x < array.length; x++)
-{
-    array[x] = rand.Next(-100, 100);
-    Console.WriteLine("Значение элемента массива " + х + " = " array[x]);
-}
+// 4. Метод опредления нечетных индексов массива.
+
+
+// 5. Метод сложения нечетных индексов.
+
+
+// 6. Метод вывода результата на экран.
+
+int[] collection = CreateArray(10);
+FillArray(collection, -10,10);
+PrintArray(collection);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int[] array = new int[4];
+// Random rand = new Random();
+// int sum = 0;
+// // заполнение и вывод на экр
+// void PrintArray(int[] array)
+// {
+//     Console.Write("[");
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = rand.Next(-10, 10);//Заполняем случайными числами диапозоном от -10 до 10
+//         Console.Write($" {array[i]} ");
+//     }
+//     Console.Write("]");
+
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] % 2 == 1)
+//         {
+//             sum = sum + array[i];
+//         }
+//     }  
+//     Console.WriteLine();
+//     Console.WriteLine($"Сумма нечетных позиций = {sum}");
+// }
+// PrintArray(array);
+// Console.WriteLine();
+
+
 
 
