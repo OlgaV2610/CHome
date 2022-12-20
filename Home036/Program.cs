@@ -30,25 +30,31 @@ void FillArray(int[]array, int argmin, int argmax)
 
 void PrintArray(int[]array)
 {
+    Console.Write("[ ");
     int count = array.Length;
     for (int i = 0; i < count; i++)
     {
         Console.Write($"{array[i]} ");
     }
-    Console.WriteLine();
+    Console.WriteLine("]");
 }
-
 // 4. Метод опредления нечетных индексов массива.
-
-
 // 5. Метод сложения нечетных индексов.
 
-
+for (int i = 1; i < array.Length; i++) 
+{
+    if (i % 2 == 1) 
+    {
+        sum += array[i];
+    }
+} 
+    
 // 6. Метод вывода результата на экран.
-
 int[] collection = CreateArray(10);
 FillArray(collection, -10,10);
 PrintArray(collection);
+Console.WriteLine();
+
 
 
 
