@@ -4,6 +4,7 @@
 // 0,5 7 -2 -0,2
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
+
 int[,] matrix = new int[3,4];
 
 void PrintArray(int[,] matr)
@@ -28,7 +29,6 @@ void FillArray(int[,] matr)
         }
     }
 }
-
 FillArray(matrix);
 Console.WriteLine();
 PrintArray(matrix);
