@@ -18,17 +18,29 @@ void PrintArray(int[,] matr)
         Console.WriteLine();
     }
 }
-void FillArray(int[,] matr)
+// void FillArray(int[,] matr)
+// {
+//     Console.Write("m = 3, n = 4");
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             matr[i, j] = new Random().NextDouble(-10, 10);
+//         }
+//     }
+// }
+// FillArray(matrix);
+
+void FillArrayRandomNumbers(double[,] matrix)
 {
-    Console.Write("m = 3, n = 4");
-    for (int i = 0; i < matr.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matr.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matr[i, j] = new Random().Next(-10, 10);
+            matrix[i, j] = Convert.ToDouble(new Random().Next(-100, 100)) / 10;
         }
     }
 }
-FillArray(matrix);
+FillArrayRandomNumbers(matrix);
 Console.WriteLine();
 PrintArray(matrix);
