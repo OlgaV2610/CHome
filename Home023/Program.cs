@@ -9,4 +9,4 @@ s = s + " -> ";
 for(int i = 1; i <= n; i++){
     s = s + (i * i * i) + ", ";
 }
-Console.Write(s);
+Console.WriteLine(s);
